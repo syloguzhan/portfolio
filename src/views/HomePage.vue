@@ -51,8 +51,8 @@
         <section id="contacts" class="section">
             <h1 data-aos="fade-up">Contact me</h1>
             <div class="social-ikons" data-aos="fade-up">
-                <a href="https://github.com/syloguzhan" target="_blank" rel="noopener" aria-label="GitHub" data-aos="fade-up"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/oguzhan-soylu-a43831273" target="_blank" rel="noopener" aria-label="LinkedIn" data-aos="fade-up"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/syloguzhan" target="_blank" rel="noopener" aria-label="GitHub" ><i class="fab fa-github" data-aos="fade-up"></i></a>
+                <a href="https://www.linkedin.com/in/oguzhan-soylu-a43831273" target="_blank" rel="noopener" aria-label="LinkedIn" ><i class="fab fa-linkedin" data-aos="fade-up"></i></a>
                 <a href="https://instagram.com/syloguzhan" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" data-aos="fade-up"></i></a>
                 <a href="mailto:oguzhansoylu866@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fas fa-envelope" data-aos="fade-up"></i></a>
             </div>
@@ -197,9 +197,9 @@ html {
   color: white;
   margin: 30px auto;
   border-radius: 20px;
-  transition: transform 1s ease-in,
-    box-shadow 1s ease-in-out,
-    background-color 1s ease-in-out;
+  transition: transform 1s ease,
+    box-shadow 1s ease,
+    background-color 2s ease;
   transform: translateY(0);
 }
 
@@ -210,7 +210,7 @@ html {
 }
 .project-card a {
     display: block;
-    color: white;
+    color: #f0f0f0;
 }
  
 
@@ -220,25 +220,31 @@ html {
     font-size: 16px;
     color: #e0f7ef;
 }
-.social-ikons  {
+.social-ikons {
     font-size: 50px;
     margin-top: 100px;
     display: flex;
     flex-direction: row;
     gap: 50px;
     justify-content: center;
+    cursor: pointer;
 }
-@media (max-width: 600px;){ 
-    .social-ikons {
+.social-ikons a {
+    color:  #42b983;
+    transition:color 0.6s;
+}
+.social-ikons a:hover {
+    color: black;
+
+}
+@media (max-width: 600px){ 
+    .social-ikons a {
         font-size: 30px;
         gap: 10px;
         margin-top: 50px;
     }
 }
-.social-ikons :hover {
-    transition: 0.3s ease; 
-}
-.github-link {
+.github-link  {
     text-decoration: none;
     color: #e0f7ef;
     font-weight: 600;
