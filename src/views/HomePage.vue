@@ -138,8 +138,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #about {
-    margin: 0;
-    padding: 0;
+    margin-top: 100px;    
 }
 html {
     scroll-behavior: smooth;
@@ -151,7 +150,7 @@ html {
     text-align: center;
     background-color: #f0f0f0;
     padding: 50px 20px;
-    min-height: 50vh;
+    min-height: 75vh;
     margin-bottom: 0%;
 }
 .section h1 {
@@ -229,7 +228,7 @@ html {
     gap: 50px;
     justify-content: center;
 }
-@media (max-width: 600px;){
+@media (max-width: 600px;){ 
     .social-ikons {
         font-size: 30px;
         gap: 10px;
