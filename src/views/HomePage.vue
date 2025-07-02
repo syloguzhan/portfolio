@@ -16,7 +16,7 @@
            </p>
         </section>
         <section id="skilss" class="section">
-          <h1 data-aos="fade-up">Summary</h1> 
+          <h1 data-aos="fade-up">Skills</h1> 
           <ul class="skill-object">
             <li v-for="(skill,index) in skills"    
                 :key="index" 
@@ -129,14 +129,12 @@ export default {
 }
 </script>
 <style>
-
 .cursor {
     display: inline-block;
     animation:blink 0.7s steps(1) infinite;
 }
 body {
-  background-color: #F9F6F6;
-  color: #3B0B0B;
+  background-color: #F0f0f0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #about {
@@ -147,13 +145,14 @@ html {
     scroll-behavior: smooth;
     padding: 0;
     margin: 0;
-    background: white;
+    background: #f0f0f0;
 }
 .section {
     text-align: center;
-    background-color: white;
+    background-color: #f0f0f0;
     padding: 50px 20px;
-    min-height: 75vh;
+    min-height: 50vh;
+    margin-bottom: 0%;
 }
 .section h1 {
     margin-top: 0;
@@ -227,8 +226,15 @@ html {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    gap: 50px;
     justify-content: center;
+}
+@media (max-width: 600px;){
+    .social-ikons {
+        font-size: 30px;
+        gap: 10px;
+        margin-top: 50px;
+    }
 }
 .social-ikons :hover {
     transition: 0.3s ease; 
