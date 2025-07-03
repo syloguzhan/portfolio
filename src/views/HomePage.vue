@@ -147,7 +147,7 @@ export default {
                     this.typedName = ''
                     index = 0        
                 }
-            },150)
+            },150) 
         }
     }    
 }
@@ -292,8 +292,8 @@ html {
     color:   #42b983;
 }
 .animation1 {
-    width: 450px;
     align-content: center;
     margin: auto;
+    width: 50%;
 } 
 </style>
