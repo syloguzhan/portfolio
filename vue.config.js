@@ -7,7 +7,7 @@ module.exports = defineConfig({
       entry: 'src/main.js',
       template: 'public/index.html',
       filename: 'index.html',
-      title: 'Oğuzhan SOYLUu' 
+      title: 'Oğuzhan SOYLU' 
     }
   }
 })

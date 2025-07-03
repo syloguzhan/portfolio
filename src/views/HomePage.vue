@@ -72,6 +72,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import Lottie from 'lottie-web';
 import animantionData1 from '@/assets/Animation1.json'
 import animationData2 from '@/assets/Animation2.json'
+import 'bootstrap'
 
 
 export default {
@@ -294,6 +295,6 @@ html {
 .animation1 {
     align-content: center;
     margin: auto;
-    width: 50%;
+    width: 33%;
 } 
 </style>
