@@ -14,18 +14,24 @@
            <p data-aos="fade-up">
              When I'm not coding ,I like reading tech blogs,experimenting with new frameworks.
            </p>
+           <div ref="lottieContainer1" class="animation1"></div>
         </section>
-        <section id="skilss" class="section">
+        <section id="skills" class="section">
           <h1 data-aos="fade-up">Skills</h1> 
-          <ul class="skill-object">
-            <li v-for="(skill,index) in skills"    
-                :key="index" 
-                :data-aos = "'fade-up'"  
-                :data-aos-delay = "index* 75"
-                 >  
-                <i :class="skill.icon"></i> {{ skill.name }} 
-            </li>
-          </ul>
+          <div class="skill-container">
+                <div>
+                    <ul class="skill-object">             
+                        <li v-for="(skill,index) in skills"    
+                            :key="index" 
+                            :data-aos = "'fade-up'"  
+                            :data-aos-delay = "index* 75"
+                            >  
+                            <i :class="skill.icon"></i> {{ skill.name }} 
+                        </li>
+                    </ul>
+                </div> 
+                <div ref="lottieContainer2" class="animation2"></div>
+          </div>
         </section> 
         <section id="projects" class="section">
             <h1 data-aos = "fade-up">Projects</h1>
@@ -55,7 +61,7 @@
                 <a href="https://www.linkedin.com/in/oguzhan-soylu-a43831273" target="_blank" rel="noopener" aria-label="LinkedIn" ><i class="fab fa-linkedin" data-aos="fade-up"></i></a>
                 <a href="https://instagram.com/syloguzhan" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" data-aos="fade-up"></i></a>
                 <a href="mailto:oguzhansoylu866@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fas fa-envelope" data-aos="fade-up"></i></a>
-            </div>
+            </div>   
         </section>
     </div>  
 </template>
@@ -63,6 +69,9 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import '@fortawesome/fontawesome-free/css/all.css';
+import Lottie from 'lottie-web';
+import animantionData1 from '@/assets/Animation1.json'
+import animationData2 from '@/assets/Animation2.json'
 
 
 export default {
@@ -70,6 +79,21 @@ export default {
     mounted() {
         AOS.init();
         this.typeName()
+        Lottie.loadAnimation({
+            container: this.$refs.lottieContainer1,
+            renderer : 'svg',
+            loop : true,
+            autoplay : true,
+            animationData : animantionData1 
+        })
+        Lottie.loadAnimation({
+            container: this.$refs.lottieContainer2,
+            renderer : 'svg',
+            loop : true,
+            autoplay : true,
+            animationData : animationData2           
+        })
+
     },
     data() {
         return {
@@ -121,7 +145,7 @@ export default {
                     index ++; 
                 }else{ 
                     this.typedName = ''
-                    index = 0             
+                    index = 0        
                 }
             },150)
         }
@@ -175,12 +199,26 @@ html {
 .section ul {
     list-style: none;
     padding: 0;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     gap: 100px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-left: 35px;
+}
+.animation2 {
+    margin-right: 0px;
+    width: 500px;
+}
+.skill-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 40px;
+    
 }
 .section ul li {
     margin: 10px 0;
@@ -205,7 +243,7 @@ html {
 
 .project-card:hover {
   transform: translateY(-30px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.30);
   background-color: #146f46;
 }
 .project-card a {
@@ -230,7 +268,7 @@ html {
     cursor: pointer;
 }
 .social-ikons a {
-    color:  #42b983;
+    color:  #42b983; 
     transition:color 0.6s;
 }
 .social-ikons a:hover {
@@ -246,11 +284,16 @@ html {
 }
 .github-link  {
     text-decoration: none;
-    color: #e0f7ef;
+    color: #e0f7ef; 
     font-weight: 600;
-    transition: color 0.3 ease;
+    transition: color 0.5 ease;
 }
 .github-link:hover {
     color:   #42b983;
 }
+.animation1 {
+    width: 450px;
+    align-content: center;
+    margin: auto;
+} 
 </style>
