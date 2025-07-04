@@ -61,8 +61,15 @@
                 <a href="https://www.linkedin.com/in/oguzhan-soylu-a43831273" target="_blank" rel="noopener" aria-label="LinkedIn" ><i class="fab fa-linkedin" data-aos="fade-up"></i></a>
                 <a href="https://instagram.com/syloguzhan" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" data-aos="fade-up"></i></a>
                 <a href="mailto:oguzhansoylu866@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fas fa-envelope" data-aos="fade-up"></i></a>
-            </div>   
+            </div> 
+        <button
+                v-show="showBackToTop"
+                @click="scrollToTop"
+                class="back-to-top">
+                Back to top  🠕 
+        </button>  
         </section>
+
     </div>  
 </template>
 <script>
@@ -94,6 +101,11 @@ export default {
             autoplay : true,
             animationData : animationData2           
         })
+        window.addEventListener('scroll',this.handleScroll)
+
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll);
 
     },
     data() {
@@ -134,7 +146,8 @@ export default {
                   techStack: ['Python,PostgreSQL,Vue.js'],
                   github : ["https://github.com/syloguzhan/MovieMate"] 
                 }
-            ]
+            ],
+            showBackToTop :false 
         }
     },
     methods : {
@@ -149,7 +162,17 @@ export default {
                     index = 0        
                 }
             },150) 
-        }
+        },
+        scrollToTop() {
+            window.scrollTo({
+                top:0, 
+                behavior:'smooth'             
+            });
+        },
+        handleScroll() {
+            this.showBackToTop = window.scrollY > 200; 
+        },
+
     }    
 }
 </script>
@@ -296,5 +319,18 @@ html {
     align-content: center;
     margin: auto;
     width: 33%;
+}
+.back-to-top {
+    background-color: #42b983;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 20px;
+    margin-top: 100px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.6s ease ;
 } 
+.back-to-top:hover {
+    background-color: #333; 
+}
 </style>
