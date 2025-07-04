@@ -66,7 +66,7 @@
                 v-show="showBackToTop"
                 @click="scrollToTop"
                 class="back-to-top">
-                Back to top  🠕 
+                Back to top
         </button>  
         </section>
 
@@ -179,7 +179,7 @@ export default {
 <style>
 .cursor {
     display: inline-block;
-    animation:blink 0.7s steps(1) infinite;
+    animation:blink 0.7s steps(1) infinite; 
 }
 body {
   background-color: #F0f0f0;
