@@ -17,7 +17,7 @@
            <div ref="lottieContainer1" class="animation1"></div>
         </section>
         <section id="skills" class="section">
-          <h1 data-aos="fade-up">Skills</h1> 
+          <h1 data-aos="fade-up">Skills</h1>  
           <div class="skill-container">
                 <div>
                     <ul class="skill-object">             
@@ -42,13 +42,13 @@
                 :data-aos-delay="index * 75">
                 <h3>{{ project.name }}</h3>
                 <p>{{ project.description }}</p>
-                <p><strong>Technologies: </strong>{{ project.techStack.join(', ') }}</p> 
+                <p><strong>Technologies: </strong>{{ project.techStack.join(', ') }}</p>       
                 <a v-if="project.github"
                     :href="project.github[0]"
                     target="_blank"
                     rel="noopener"
                     class="github-link">
-                    GitHub Repository
+                    GitHub Repository 
                 </a>
 
             </div>
@@ -58,14 +58,14 @@
             <h1 data-aos="fade-up">Contact me</h1>
             <div class="social-ikons" data-aos="fade-up">
                 <a href="https://github.com/syloguzhan" target="_blank" rel="noopener" aria-label="GitHub" ><i class="fab fa-github" data-aos="fade-up"></i></a>
-                <a href="https://www.linkedin.com/in/oguzhan-soylu-a43831273" target="_blank" rel="noopener" aria-label="LinkedIn" ><i class="fab fa-linkedin" data-aos="fade-up"></i></a>
+                <a href="https://www.linkedin.com/in/o%C4%9Fuzhan-soylu-a43831273/" target="_blank" rel="noopener" aria-label="LinkedIn" ><i class="fab fa-linkedin" data-aos="fade-up"></i></a>
                 <a href="https://instagram.com/syloguzhan" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" data-aos="fade-up"></i></a>
                 <a href="mailto:oguzhansoylu866@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fas fa-envelope" data-aos="fade-up"></i></a>
             </div> 
         <button
                 v-show="showBackToTop"
                 @click="scrollToTop"
-                class="back-to-top">
+                class="back-to-top"> 
                 Back to top
         </button>  
         </section>
@@ -79,7 +79,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import Lottie from 'lottie-web';
 import animantionData1 from '@/assets/Animation1.json'
 import animationData2 from '@/assets/Animation2.json'
-import 'bootstrap'
+
 
 
 export default {
@@ -101,11 +101,11 @@ export default {
             autoplay : true,
             animationData : animationData2           
         })
-        window.addEventListener('scroll',this.handleScroll)
+        window.addEventListener('scroll',this.handleScroll) 
 
     },
     beforeDestroy() {
-        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('scroll', this.handleScroll); 
 
     },
     data() {
@@ -131,7 +131,7 @@ export default {
                     name : "Twitter Clone",
                     description : "A Twitter API client built with python.Allows sending and retrieving tweets.",
                     techStack : ['Python,PostgreSQL,Vue.js'],
-                    github : ["https://github.com/syloguzhan/twitter"] 
+                    github : ["https://github.com/syloguzhan/twitter"]  
                 },
                 {
                    name: 'Image Processing',
@@ -158,8 +158,8 @@ export default {
                     this.typedName += this.fullName[index]
                     index ++; 
                 }else{ 
-                    this.typedName = ''
-                    index = 0        
+                    this.typedName = ''   
+                    index = 0         
                 }
             },150) 
         },
@@ -169,10 +169,9 @@ export default {
                 behavior:'smooth'             
             });
         },
-        handleScroll() {
-            this.showBackToTop = window.scrollY > 200; 
-        },
-
+        handleScroll() { 
+            this.showBackToTop = window.scrollY > 200;    
+        }, 
     }    
 }
 </script>
@@ -192,8 +191,8 @@ html {
     scroll-behavior: smooth;
     padding: 0;
     margin: 0;
-    background: #f0f0f0;
-}
+    background: #f0f0f0; 
+} 
 .section {
     text-align: center;
     background-color: #f0f0f0;
@@ -205,7 +204,7 @@ html {
     margin-top: 0;
     font-size: 40px;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 .section h2 {
     font-size: 24px;
@@ -242,7 +241,6 @@ html {
     align-items: center;
     justify-content:space-around;
     margin-top: 40px;
-    
 }
 .section ul li {
     margin: 10px 0;
@@ -260,8 +258,8 @@ html {
   margin: 30px auto;
   border-radius: 20px;
   transition: transform 1s ease,
-    box-shadow 1s ease,
-    background-color 2s ease;
+              box-shadow 1s ease,
+              background-color 0.6s ease;
   transform: translateY(0);
 }
 
@@ -316,7 +314,7 @@ html {
     color:   #42b983;
 }
 .animation1 {
-    align-content: center;
+    align-content: center; 
     margin: auto;
     width: 33%;
 }
@@ -328,7 +326,7 @@ html {
     margin-top: 100px;
     cursor: pointer;
     color: white;
-    transition: background-color 0.6s ease ;
+    transition: background-color 0.6s ease ;  
 } 
 .back-to-top:hover {
     background-color: #333; 
